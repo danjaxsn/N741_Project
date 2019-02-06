@@ -1,0 +1,50 @@
+---
+title: The Kidneys Can Tweet?! An Exploratory Analysis of Twitter Hashtags Related
+  to CKDu.
+author: "Daniel Smith {daniel.smith2@emory.edu} "
+date: "2/6/2019"
+output:
+  
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Overview and Motivation
+
+Why did you undertake this particular project? What inspired you, what are your background and research interests that may have influenced your decision? 
+
+## Project Objectives
+
+What is the primary focal question that you are trying to answer? What would you like to learn and accomplish?
+
+## Data
+
+Using R package 'rtweet' data will be extracted from Twitter.com a social media website that allows users to tweet short messages of 280 characters or less. Common data that can be acquired via tweet analysis includes textual/sentiment analysis, analysis of the social connections between users, and geolocation analysis of where a tweet originated. This project will be focused on analyzing tweets with keywords and hashtags related to the global CKDu epidemic. Currently, candidate key words include 'chronic kidney disease of unknown etiology', 'enfermedad renal crónica no tradicional', 'mesoamerican nephropathy', and 'chronic interstitial nephritis in agricultural communities'. Candidate hastags are #CKDu #CINAC #MeN and #ERCnt. 
+
+## Data Wrangling: 
+
+Do you anticipate that there will be extensive data cleaning / reshaping / extraction? Are there questions you will need to calculate in your data (e.g., perhaps you have height and weight, but not BMI)? How will you implement this particular data wrangling step?
+
+## Exploratory Analysis:
+
+Which methods / visualizations are you planning to use to explore your tidy dataset?
+
+## Analysis
+
+How are you planning to analyze your data?
+
+## Schedule
+
+### Completed Activities
+
+-January 28, 2019 Meeting with Steve Pittard to discuss rTweet package and potential difficulties with analyzing tweets. 
+
+-January 28, 2019 Apply for Twitter Developer Account. A developer account is needed for access to Twitter's API that will allow for tweet extraction and data analysis in R. Developer Account Applicaiton Status: __Approved!__
+
+### Future Activities/Deadlines
+
+Keeping in mind the due dates listed above for the intermediate and final milestones, make a plan to meet these deadlines. Write these in terms of weekly tasks / goals.
+
