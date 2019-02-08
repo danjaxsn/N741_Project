@@ -32,16 +32,16 @@ Using R package 'rtweet' data will be extracted from Twitter.com a social media 
 
 ## Data Wrangling: 
 
-From what I have seen in the literature thus far, there will be preprocessing of the tweet data required before I can analyze my data. Tweets will need to be converted to lower case letters; usernames, links, puncturation, digits, and stopwords will need to be removed; and stemming of words (i.e. making "walking"", "walk", and "walks"" all appear in the base form of "walk") will have to occur. The R package 'tm' will be used for preprocessing of the data. 
+From what I have seen in the literature thus far, there will be preprocessing of the tweet data required before I can analyze my data. Tweets will need to be converted to lower case letters; usernames, links, punctuation, digits, and stopwords will need to be removed; and stemming of words (i.e. making "walking"", "walk", and "walks"" all appear in the base form of "walk") will have to occur. The R package 'tm' will be used for preprocessing of the data.
 
 
-## Exploratory Analysis:(subset of all the tweets... To make sure this works)
+## Exploratory Analysis:
 
 Exploratory Analysis will be conducted first with a subset of the total tweets acquired from Twitter. The ‘tm’ package in R will be used to summarize and give frequencies for the keywords and hashtags of the subset of downloaded tweets. Location of origin for the subset will be analyzed using both the ‘ggplot2’ and ‘dplyr’ packages. Simple sentiment analysis (positive vs. negative) will be conducted on this subset using the ‘syuzhet’ package in R.
 
 ## Analysis
 
-How are you planning to analyze your data?
+Once exploratory analysis is completed, the totality of the extracted tweets will be analyzed using similar methods as described above. However, in addition to the simple sentiment analysis (positive vs. negative), eight emotion sentiment analysis (anger, anticipation, disgust, fear, joy, sadness, surprise, and trust) will be conducted to further understand the emotions behind CKDu tweets. 
 
 ## Schedule
 
@@ -53,21 +53,21 @@ How are you planning to analyze your data?
 
 ### Future Activities/Deadlines
 
--Week of __Feb 11__: 
+-Week of __Feb 11__: Finalize milestone 1 and submit by February 13.
 
--Week of __Feb 18__: 
+-Week of __Feb 18__: Extract Tweets from Twitter 
 
 -Week of __Feb 25__: No activities scheduled due to SNRS Conference Attendance. 
 
--Week of __March 4__: 
+-Week of __March 4__: Preprocess the subset of tweets to be used in the exploratory analysis. 
 
--Week of __March 11__: 
+-Week of __March 11__: Analyze subset of tweets using the 'tm', 'ggplot2', and 'dplyr' packages to calculate frequencies of hashtags & keywords and to calculate location of origin.
 
--Week of __March 18__: 
+-Week of __March 18__: Analyze subset of tweets for simple sentiment analysis using the ‘syuzhet’ package.
 
 -Week of __March 25__: Finalize milestone 2 and submit by March 27. 
 
--Week of __April 1__: 
+-Week of __April 1__: d 
 
 -Week of __April 8__: 
 
