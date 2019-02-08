@@ -4,7 +4,6 @@ title: The Kidneys Can Tweet?! An Exploratory Analysis of Twitter Hashtags Relat
 author: "Daniel Smith {daniel.smith2@emory.edu} "
 date: "2/6/2019"
 output:
-  
   pdf_document: default
   html_document: default
 ---
@@ -14,11 +13,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Overview and Motivation
 
-Why did you undertake this particular project? What inspired you, what are your background and research interests that may have influenced your decision? 
+Being an avid twitter user has showed me the value that global connections can have when discussing research ideas and connecting with other scientists. Applying data analytic techniques to tweets has proven to be a wealth of knowledge for other researchers.  Due to this, I am eager to gain new skills that will allow me to function more proficiently in the world of nursing data science. Thru this project, I will gain insight and knowledge about the current conversations occurring between other scientist in regard to the research behind the current epidemic of chronic kidney disease of unknown etiology (CKDu), which is the focus of my dissertation project with Drs. Hertzberg and Mac. For my dissertation, I am studying the occupational histories and exposures of immigrant patients receiving emergent dialysis in Atlanta, GA, who are hypothesized to suffer from CKDu. By conducting an analysis of tweets related to CKDu, I will gain a more in-depth understanding of this global epidemic that will shape my understanding and thinking of my own dissertation project while, at the same time, helping me to gain new data science skills.
+
 
 ## Project Objectives
 
-What is the primary focal question that you are trying to answer? What would you like to learn and accomplish?
+This project will seek to characterize tweets about the CKDu epidemic. 
+__Q1__. What are the frequencies of hashtags used when tweeting about the CKDu epidemic?
+__Q2__. What are the frequencies of keywords used when tweeting abotu the CKDu epidemic?
+__Q3__. Where are people from who are tweeting about the CKDu epidemic?
+__Q4__. What are the emtions of tweets about the CKDu epidemic? 
+
+By exploring the four questions above, I hope to learn methods for accessing and searching twitter data, cleaning and processing extracted tweets, and analyzing tweets for frequency, location of origin, and sentiment. 
 
 ## Data
 
@@ -26,11 +32,12 @@ Using R package 'rtweet' data will be extracted from Twitter.com a social media 
 
 ## Data Wrangling: 
 
-Do you anticipate that there will be extensive data cleaning / reshaping / extraction? Are there questions you will need to calculate in your data (e.g., perhaps you have height and weight, but not BMI)? How will you implement this particular data wrangling step?
+From what I have seen in the literature thus far, there will be preprocessing of the tweet data required before I can analyze my data. Tweets will need to be converted to lower case letters; usernames, links, puncturation, digits, and stopwords will need to be removed; and stemming of words (i.e. making "walking"", "walk", and "walks"" all appear in the base form of "walk") will have to occur. The R package 'tm' will be used for preprocessing of the data. 
 
-## Exploratory Analysis:
 
-Which methods / visualizations are you planning to use to explore your tidy dataset?
+## Exploratory Analysis:(subset of all the tweets... To make sure this works)
+
+Exploratory Analysis will be conducted first with a subset of the total tweets acquired from Twitter. The ‘tm’ package in R will be used to summarize and give frequencies for the keywords and hashtags of the subset of downloaded tweets. Location of origin for the subset will be analyzed using both the ‘ggplot2’ and ‘dplyr’ packages. Simple sentiment analysis (positive vs. negative) will be conducted on this subset using the ‘syuzhet’ package in R.
 
 ## Analysis
 
