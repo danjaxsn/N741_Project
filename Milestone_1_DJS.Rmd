@@ -43,6 +43,10 @@ Exploratory Analysis will be conducted first with a subset of the total tweets a
 
 Once exploratory analysis is completed, the totality of the extracted tweets will be analyzed using similar methods as described above. However, in addition to the simple sentiment analysis (positive vs. negative), eight emotion sentiment analysis (anger, anticipation, disgust, fear, joy, sadness, surprise, and trust) will be conducted to further understand the emotions behind CKDu tweets. 
 
+### Sample Plots & Tables
+
+#### Sample Plot of Number of CKDu Tweets per Country
+
 ## Schedule
 
 ### Completed Activities
@@ -67,18 +71,13 @@ Once exploratory analysis is completed, the totality of the extracted tweets wil
 
 -Week of __March 25__: Finalize milestone 2 and submit by March 27. 
 
--Week of __April 1__: d 
+-Week of __April 1__: Preprocess totality of the retrieved tweets.
 
--Week of __April 8__: 
+-Week of __April 8__: Analyze totality of tweets using the 'tm', 'ggplot2', and 'dplyr' packages to calculate frequencies of hashtags & keywords and to calculate location of origin. Additionally, analyze totality of tweets for simple sentiment analysis using the ‘syuzhet’ package.
 
--Week of __April 15__: 
+-Week of __April 15__: Finalize milestone 3 and prepare manuscript plus powerpoint for project.  
 
--Week of __April 22__: 
+-Week of __April 22__: Extra week built in as a buffer. 
 
--Week of __April 29__: Finalized milestone 3 and present project on May 1. 
-
-
-
-
-Keeping in mind the due dates listed above for the intermediate and final milestones, make a plan to meet these deadlines. Write these in terms of weekly tasks / goals.
+-Week of __April 29__: Present project on May 1. 
 
