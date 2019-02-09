@@ -49,7 +49,7 @@ Once exploratory analysis is completed, the totality of the extracted tweets wil
 
 #### Sample Plot of Number of CKDu Tweets per Country
 
-Representation of what a plot showing the number of CKDu tweets per country could potentially look like. 
+Representation of what a plot showing the number of CKDu tweets per country could potentially look like.
 ```{r, include=FALSE}
 #Made up data to be used in making histogram below. 
 tweets <- c(100,305,420,334,278,130)
@@ -58,9 +58,9 @@ CKDu_Tweets <- data.frame(country, tweets)
 ```
 ```{r}
 #Make Histogram of CKDu tweets per country
-ggplot(data = CKDu_Tweets, aes(x = country, y = tweets)) + geom_bar(stat = "identity")
+ggplot(data = CKDu_Tweets, aes(x = country, y = tweets)) + geom_bar(stat = "identity")+
+  ggtitle("Number of CKDu Tweets per Country")
 ```
-
 
 ## Schedule
 
