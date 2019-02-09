@@ -30,7 +30,7 @@ By exploring the four questions above, I hope to learn methods for accessing and
 
 ## Data
 
-Using R package 'rtweet' data will be extracted from Twitter.com a social media website that allows users to tweet short messages of 280 characters or less. Common data that can be acquired via tweet analysis includes textual/sentiment analysis, analysis of the social connections between users, and geolocation analysis of where a tweet originated. This project will be focused on analyzing tweets with keywords and hashtags related to the global CKDu epidemic. Currently, candidate key words include 'chronic kidney disease of unknown etiology', 'enfermedad renal crónica no tradicional', 'mesoamerican nephropathy', and 'chronic interstitial nephritis in agricultural communities'. Candidate hastags are #CKDu #CINAC #MeN and #ERCnt. 
+Using R package 'rtweet' data will be extracted from Twitter, a social media website that allows users to tweet short messages of 280 characters or less. Common data that can be acquired via tweet analysis includes textual/sentiment analysis, analysis of the social connections between users, and geolocation analysis of where a tweet originated. This project will be focused on analyzing tweets with keywords and hashtags related to the global CKDu epidemic. Currently, candidate key words include 'chronic kidney disease of unknown etiology', 'enfermedad renal crónica no tradicional', 'mesoamerican nephropathy', and 'chronic interstitial nephritis in agricultural communities'. Candidate hastags are #CKDu #CINAC #MeN and #ERCnt. 
 
 ## Data Wrangling: 
 
@@ -45,21 +45,41 @@ Exploratory Analysis will be conducted first with a subset of the total tweets a
 
 Once exploratory analysis is completed, the totality of the extracted tweets will be analyzed using similar methods as described above. However, in addition to the simple sentiment analysis (positive vs. negative), eight emotion sentiment analysis (anger, anticipation, disgust, fear, joy, sadness, surprise, and trust) will be conducted to further understand the emotions behind CKDu tweets. 
 
+
 ### Sample Plots & Tables
 
 #### Sample Plot of Number of CKDu Tweets per Country
 
-Representation of what a plot showing the number of CKDu tweets per country could potentially look like.
-```{r, include=FALSE}
-#Made up data to be used in making histogram below. 
-tweets <- c(100,305,420,334,278,130)
-country <- c("Costa Rica", "Nicaragua", "El Salvador", "Mexico", "Guatemala", "USA")
+Representation of what a plot showing the number of CKDu tweets per country could _potentially_ look like.
+```{r, fig.width=7, fig.height=4, echo=FALSE}
+#Made up data frame to be used in making histogram below. 
+tweets <- c(100,350,420,334,278,130)
+country <- c("San Jose, Costa Rica", "Managua, Nicaragua", "San Salvador, El Salvador", "Mexico City, Mexico", "Guatemala City, Guatemala", "Moultrie, USA")
 CKDu_Tweets <- data.frame(country, tweets)
+#Make Histogram of CKDu tweets per country (where bars are in decreasing order)
+ggplot(data = CKDu_Tweets, aes(x = reorder(country, tweets), y = tweets))+ 
+  geom_bar(stat = "identity")+
+  ggtitle("Number of CKDu Tweets by Location")+ 
+  xlab("Location")+
+  ylab("Number of Tweets")+
+  coord_flip() #flip axis to facilitate visual representation of decreasing number of tweets. 
+ 
 ```
-```{r}
-#Make Histogram of CKDu tweets per country
-ggplot(data = CKDu_Tweets, aes(x = country, y = tweets)) + geom_bar(stat = "identity")+
-  ggtitle("Number of CKDu Tweets per Country")
+\pagebreak
+
+#### Sample Plot of Simple Sentiment Analysis on Tweets
+
+Representation of what a plot showing the proportins of simple sentiment analysis (negative vs. positive) could _potentially_ look like. 
+
+```{r, fig.width=7, fig.height=4, echo=FALSE}
+#Made up data to be used in making pie chart below. 
+slices <- c(60,40)
+sentiment <- c("negative", "positive")
+#Making an annotated pie chart to display sentiment analysis results. 
+pct <- round(slices/sum(slices)*100)
+sentiment <- paste(sentiment, pct) # add percents to labels
+sentiment <- paste(sentiment,"%",sep="") # ad % to labels
+pie(slices,labels = sentiment, main="Pie Chart of Sentiment Analysis Results")
 ```
 
 ## Schedule
@@ -94,5 +114,13 @@ ggplot(data = CKDu_Tweets, aes(x = country, y = tweets)) + geom_bar(stat = "iden
 
 -Week of __April 22__: Extra week built in as a buffer. 
 
--Week of __April 29__: Present project on May 1. 
+-Week of __April 29__: Present project on May 1.
+
+\vspace{22pt}
+
+__Notes__:
+
+_The code used to create this document can be found at https://github.com/danjaxsn/N741_Project.git _
+
+_The link to twitter is https://twitter.com/ _
 
